@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --primary:#de4f61;
+    --white:#fff;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration:none;
+    list-style: none;
+    transition: .2s linear;
+}
+body{
+    background: #080b10;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+background: transparent;
+}
+.Header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 9%;
+    background: #040404;
+
+}
+.Header .Logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--white);
+}
+.Header .Logo i{
+    padding-right: .4rem;
+    color:var(--primary);
+}
+.Header .Nav a{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin: 0 1rem;
+   
+}
+.Header .Nav a:hover{
+    color:goldenrod;
+}
+#Menu{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    color: var(--primary);
+    display:none;
+    cursor: pointer;
+}
+
+.Home{
+    background: url(./1.jpg) no-repeat;
+    min-height: 110vh;
+    display: flex;
+    background-size: cover;
+    align-items: center;
+}
+.Home .content{
+    width: 55rem;
+}
+section{
+padding: 5rem 7%;
+
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--primary);
+    border-radius: 5rem;
+}
+.Header .active{
+    background: #040404;
+    padding: 2rem 9%;
+    box-shadow: var(--box-shawdow);
+}
+.Header .Nav a.active
+.Header .Nav a:hover{
+ color: var(--primary);
+}
+
+
+.Home .content h3{
+    font-size: 8rem;
+    color:var(--white);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.Home .content h3 span{
+    color: var(--primary);
+    text-transform: uppercase;
+}
+.Home .content h3 span{
+    color:var(--primary);
+    text-transform: uppercase;
+}
+.Home .content p{
+        font-size: 2.7rem;
+        color:rgb(226, 223, 223);
+        padding: 2rem 0;
+        line-height: 2;
+    }
+.btn{
+    font-size: 1.9rem;
+    margin-top: 1rem;
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--box-shawdow);
+    padding: .7rem 3rem;
+    border-radius: 5rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+} 
+.btn::before,
+.btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background: #de4f61;
+    z-index: -1;
+    transition: .3s linear;
+}
+.btn::before{
+left: 0;
+}
+.btn::after{
+    right: 0;
+}
+.btn :hover:before,
+.btn :hover:after{
+    width: 100%;
+}
+
+.Heading{
+    font-size: 4rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom:6rem;
+    text-align: center;
+}
+.GymsTypes .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.GymsTypes .box-container .box{
+height: 25rem;
+flex: 1 1 30rem;
+border: 1rem solid var(--white);
+box-shadow: var(--box-shadow);
+position: relative;
+overflow: hidden;
+}
+.GymsTypes .box-container .box img{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.GymsTypes .box-container .box .content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    height: 100%;
+    width: 100%;
+    background: grey;
+    padding: 5rem;
+    text-align: center;
+}
+.GymsTypes .box-container .box:hover .content{
+transform: translate(-50%, -50%) scale(1);
+}
+.GymsTypes .box-container .box .content h3{
+font-size: 2.8rem;
+color: #333;
+padding: 1rem 0;
+}
+.GymsTypes .box-container .box .content p{
+    font-size: 2.5rem;
+    color: #fffcfc;
+    padding: 1rem 0;
+    }
+    .footer .share{
+        padding-top: 2rem;
+        text-align: center; 
+    }
+    .footer .share a{
+        font-size: 4rem;
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+        line-height:5rem;
+        color: var(--primary);
+        border: 1rem;
+        margin: 2rem;
+        border-radius: 50%;
+    }
+    .footer .share:hover{
+        color: #0051ad;
+    }
+    @media (max-width:991px){
+        html{
+            font-size: 55%;
+    }
+}@media(max-width:768px){
+    #Menu{
+        display: inline-block;
+    }
+.fa-times{
+    transform: rotate(180deg);
+}
+
+    
+}
+.Home{
+    background-position:center;
+}
+.Home .content h3{
+    font-size: 4rem
+}
+.Home .content p{
+font-size: 2rem;
+}
